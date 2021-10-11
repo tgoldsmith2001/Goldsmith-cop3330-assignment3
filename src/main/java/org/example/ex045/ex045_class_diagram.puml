@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+    +{static}void main(String[] args)
+    {static}ArrayList<String> updateString(ArrayList<String> in, String replace, String replacement)
+    {static}ArrayList<String> readFile(String path)
+    {static}String readString(Scanner input, String prompt)
+        {static}boolean createFile(ArrayList <String> out,String path, String name)
+}
+
+@enduml

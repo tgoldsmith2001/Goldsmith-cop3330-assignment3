@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+    +{static}void main(System.in)
+    {static}void runSearch(product_list inventory, Scanner input)
+    {static}product_list readJson()
+    {static}String readString(Scanner input, String prompt)
+    {static}int isInArray(product_list checkArray, String name)
+}
+class product{
+    -String name
+    -double price
+    -int quantity
+    +product(String name, double price, int quantity)
+    +String getName()
+    +double getPrice()
+    +int getQuantity()
+}
+class product_list{
+    -ArrayList<product>products
+    +product_list(ArrayList<product>inventory)
+}
+
+@enduml

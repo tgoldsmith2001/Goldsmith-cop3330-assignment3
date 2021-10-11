@@ -1,0 +1,64 @@
+Class App
+    function main
+        Define in (String) with a Call to readFile with path to input file
+        Define in_split with a Call to splitString with input in
+        Define wordQuantities (ArrayList of Words) with a call to countWords with input in_split
+        Define out (ArrayList of Words) with a call to sort with input of wordQuantities
+        Call printFinal with input out
+
+    function printFinal with input out (ArrayList of Words)
+        for Word in out
+            Define String as word stored in out
+            Print word stored at index
+            For each occurence of the word
+                Print * to console
+            Print new line to console
+
+    function readFile with input path (String)
+        Define in (String) with blank String
+        Define new Buffered Reader with a file at location of path
+        Define line (String)
+        while there is a line to read
+            add current line to in
+        return in;
+
+    function splitString with input in (String)
+        Define split (Array of Strings)
+        Set Split equal to in with the Strings divided into different elements of array divided on the basis of spaces
+        return Split
+
+    function countWords with input in (Array of Strings)
+        Define out (ArrayList of Strings)
+        Define x (Integer)
+        For String in in
+            Set x equal to a call to checkforWord
+            if x is -1
+                add the string to out
+            else
+                update the number of occurrences of the word in out
+        return out
+
+    function swap with input words (ArrayList of Words), ind1 (int), ind2 (int)
+        Call swap function in Collection
+
+    function sort with input of words (ArrayList of Words)
+        For Loop from i=0 to i= length of words-1
+            For loop from j=i to j= length of words
+                If word at index j occurs more than word at index i
+                    Call swap with input words, i and j
+        return words
+
+    function checkForWord with input checkAgainst (ArrayList of Words) and check (String)
+        For word in checkAgainst
+            If the word at this index equals check
+            return index
+        return -1
+
+Class Word
+    Define private Class variables word (String) and numOccurences (int)
+
+    function Word with input word (String) and numOccurences (int)
+        set parameters equal to class variables
+
+    Getter functions to allow access to the private variables outside of the class
+    Setter function of numOccurences to allow alteration of the variable outside of the class

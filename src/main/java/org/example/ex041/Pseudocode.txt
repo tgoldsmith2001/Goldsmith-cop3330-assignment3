@@ -1,0 +1,35 @@
+Class App
+    function Main
+        Create ArrayList of Strings called Values
+        Set Values to Call of readFile with input String Path
+        Call Sort with input Values
+        Call createFile with input Values, String path, and String name
+
+    function readFile with input path(String)
+        Declare arrayList Values
+        Declare new Buffered Reader Object and Set with path of file
+        Declare String line
+        While there is a new line to read in file
+            Add current line to Values
+        Return values
+
+    function createFile with Values (ArrayList of String), path (String), and name(String)
+        Declare new Buffered Writer, File Writer, and File
+        Try:
+            Set file to path + name
+            If file doesn't exist
+                Create new file
+            Set Buffered writer to new File Writer
+            Output line stating number of Values in Values
+            For String in Values
+                Output String+new Line
+            Close File
+            Print to console that file was created
+            return True
+        Catch:
+            Print to Console that file couldn't be created
+            return False
+
+    function Sort with input Values (ArrayList of Strings)
+        Return sort of Values within Collections class
+

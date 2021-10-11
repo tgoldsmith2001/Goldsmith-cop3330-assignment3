@@ -1,0 +1,47 @@
+Class App
+    function main
+        Instantiate new scanner (input)
+        Define inventory variable of type product_list
+        Set inventory to call of readJson
+        Call runSearch
+
+    function runSearch with input inventory (product_list) and input (Scanner)
+        While true
+            Define String entry as a Call to readString with prompt input "What is your product name? "
+            Define int index as a Call to isInArray with inputs inventory and entry
+            if index is -1
+                Define foundItem as product in inventory at an index of index
+                Output the name, price, and quantity of foundItem
+                Break loop
+            else
+                Output that item was not found
+                Continue loop
+
+
+    function readJson with input of path (String)
+        Define new Gson
+        Define new Json Reader with path
+        Define allProducts (product_list) as Json reader from gson
+        return allProducts
+
+    function readString with input prompt (String) and input(Scanner)
+        Print prompt to console
+        return next line from Scanner
+
+    function isInArray with input check Array (product_list) and name (String)
+        for product in products within product List
+            if name is equal to product name in product list
+                return index
+        return -1
+
+Class product
+    Define private Class variables name (String), price (Double), and quantity (int)
+    function product with input of name (String), price (Double), and quantity (int)
+        Set Class variables to inputs
+    Getter Functions to access within other classes
+
+Class product_list
+    Define Class variable products (Arraylist of type product)
+    function product_list with input of products (ArrayList of type product)
+        set this.products to products
+    Getter function of products

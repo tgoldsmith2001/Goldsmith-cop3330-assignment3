@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/class-diagram
+class App{
+    +{static}void main(System.in)
+    {static}String readLine(String prompt, Scanner input)
+    {static}String yesNoResponse(String prompt, Scanner input)
+    {static}void generateWebsite(String siteName,String author, String jc, String css)
+    {static}boolean makeDirectory(String path, String name)
+    {static}boolean makeHtmlFile(String path, String name, String siteName, String author)
+}
+@enduml

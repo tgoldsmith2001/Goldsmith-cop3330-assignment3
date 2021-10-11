@@ -1,0 +1,51 @@
+Class app
+    function main
+        define Strings name, author, CSS, and javaScript
+        instantiate new Scanner
+        Set name to Call of readLine with input prompt "Site name: "
+        Set author to Call of readLine with input prompt of "Author: "
+        Set JavaScript to Call of yesNoPrompt with input prompt of "Do you want a folder for JavaScript (Y or N): "
+        Set CSS to Call of yesNoResponse with input prompt of "Do you want a folder for CSS (Y or N): "
+        Call generateWebsite with input name, author, CSS, and javaScript
+
+    function readLine with input prompt (String), and input (Scanner)
+        Output prompt
+        Return next text line in Scanner
+
+    function yesNoResponse with input prompt (String), and input (Scanner)
+        Define String response
+        while true
+            Output prompt to console
+            Set response to next line in Scanner
+            Update response to all lower case
+            If response is "y" or "n"
+                break
+            else
+                Output "Invalid input"
+                continue
+        return response
+
+    function generateWebsite with input siteName (String),author (String), jc (String),and css(String)
+        Define String basePath
+        Set basePath to base path of location where directory will be placed
+        Call makeDirectory with input basePath and siteName
+        Call makeHtmlFile with input basePath+siteName, "index", sitename and author
+        if jc is 'y'
+            Call makeDirectory with input basePath+siteName and "js"
+        if css is 'y'
+            Call makeDirectory with input basePath+siteName and "css"
+
+    function makeDirectory with input path (String) and name (String)
+        Define and instantiate new file with path of path+"\"+name
+        Define Boolean B
+        Set B to make Directory function from file
+        return B
+
+    function makeHtmlFile with input path (String), name (String), siteName (String), author (String)
+        define Boolean B and set as False
+        Instantiate new File with path of path+"\"+name+".html"
+        If file doesn't already exist
+            Set B to create new file
+        define new File Write and Buffered Reader
+        define "<title>"+siteName+"</title>" for title tag and write to Buffered Writer
+        define "<meta>"+author+"</meta>" for author tag and write to Buffered Writer

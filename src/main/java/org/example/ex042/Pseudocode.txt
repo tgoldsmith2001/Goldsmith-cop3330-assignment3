@@ -1,0 +1,63 @@
+Class App
+    function main
+        Define ArrayList of Employee employees
+        Set employees to readFile
+        Define ArrayList of Employee sortedEmployees
+        Set sortedEmployees to sort with input employees
+        Call printData with input sortedEmployees
+
+    function sort with input in (ArrayList of Employees)
+        Define ArrayList of Employee data and Set to in
+        Define curr_max, and index
+        For i=0 to data length
+            Set index and curr_max to -1
+            For j=i to data length
+                If curr_max is greater than Employee salary at index j
+                    Update curr_max to Employee salary at index j
+                    Update index to j
+            Call Swap with input data, i, and index
+
+    function swap with input data (ArrayList of Employees) ,ind1 (int), ind2 (int)
+        Utilize swap function in Collections to swap ind1 and ind2 in data
+        Return data
+
+    function printData with input ArrayList of Employee employees
+        Print "First Last Salary" with appropriate spacing
+        For employee in employees
+            Print employee f_Name, l_Name, and salary with appropriate spacing
+            Create new line in output
+
+    function readFile
+        Define new ArrayList of Employees called employees
+        Define new Buffered Reader, reader
+        Set reader to new Buffered Reader with new File Reader at path of input file
+        Define String line
+        While there is a next line to read
+            Create new Employee object with parameter of String at next line
+            Add new Employee to employees
+        return employees
+
+Class Employee
+    Define private Class Variables f_Name(String), l_Name(String), salary(Int)
+    function employee with input of data (String)
+        Define array of Strings information
+        Set information to Call of parseString with input data
+        Set f_Name to String at index 0 of information
+        Set l_Name to String at index 1 of information
+        set salary to parsed Integer of String at index 2 of information
+
+    function parseString with input data(String)
+        Define index(int) to value 0
+        Define new array of Strings retString
+        initiate retString with 3 blank Strings
+        for character in string
+            if character is ','
+                Increment index
+            else
+                Add character to String in retString at position index
+        Return retString
+
+    function Getters
+        Return the values of each of the variables to be used in main class
+
+

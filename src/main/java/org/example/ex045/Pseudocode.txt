@@ -1,0 +1,41 @@
+Class App
+    function main
+        Instantiate input (scanner)
+        Define name (String) as a Call to readString with input prompt "Enter the name of the output file: "
+        Define in (ArrayList of Strings) as a Call to readFile with source path of input file
+        Define out (ArrayList of Strings) as a Call to updateString with input in, "utilize" and "use"
+        Call createFile with input out, the path for the new file and name
+
+    function createFile with input out (ArrayList of Strings),path (String) and name String
+        Define Buffered Writer, File Writer and File
+        Try
+            Define file as path+"\"+name+".txt"
+            If file doesn't exist
+                Create new file
+            For String in out
+                Write String to file
+            Close Buffered Writer
+            Output that file was written
+            return true
+        catch
+            Output that file could not be written
+            return false
+
+    function updateString with input in (ArrayList of Strings), replace (String) and replacement (String)
+        Define out (ArrayList of Strings)
+        For String in out
+            Define toAdd (String) as out with all instances of replace changed with replacement
+            Add updated String to ArrayList
+        return out
+
+    function readFile with input path (String)
+        Define text_lines (ArrayList String)
+        Define and Set Buffered Reader to file at path
+        Define line (String)
+        If there is a line
+            add line to text_lines
+        return text_lines
+
+    function readString with input prompt (Sting) and input (Scanner)
+        Print prompt to console
+        return next line from Scanner
